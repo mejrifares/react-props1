@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import Profile from './components/Profile';
 
 function App() {
+  const profile = {
+    name : "Faress",
+    lastName : "Mejri",
+    bio : "Im Creative Developper",
+    profession : "Softwar Engineer",
+    picture : "https://www.internships.com/wp-content/uploads/2019/09/software-engineer-600x400.jpg"
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile {...profile}/>
     </div>
   );
 }
